@@ -344,6 +344,8 @@
     <Compile Include="RegistroFacturas.aspx.designer.cs">
       <DependentUpon>RegistroFacturas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="repositories\interfaces\ILoginRepository.cs" />
+    <Compile Include="repositories\interfaces\LoginRepository.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -382,6 +384,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="repositories\models\" />
+    <Folder Include="repositories\RepositoriesGeneric\" />
+    <Folder Include="session\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
