@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="UTF-8">
     <title>AgroLedger - Inicio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> // porbando cambios
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> // probando cambios
     <style>
         @keyframes fadeIn {
             from {
