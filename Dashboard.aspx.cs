@@ -54,6 +54,13 @@ namespace Agroledger
             }
         }
 
+        protected void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            // Cierra la sesión y redirige al login
+            Session.Abandon();
+            Response.Redirect("Login.aspx"); // Cambia por la página de inicio de sesión que tengas
+        }
+
         protected void btnVentas_Click(object sender, EventArgs e)
         {
             Response.Redirect("Ventas.aspx");

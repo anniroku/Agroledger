@@ -111,33 +111,37 @@
                <div class="logo">
                     <img src="image/logo_empresa.jpg" alt="Logo Agroledger" />
                    </div>
-                  <!-- LOGIN -->
-                 <div id="login" class="form-section active animate_animated animate_fadeIn">
-                      <h2>Iniciar Sesión</h2>
-                      <asp:ValidationSummary ID="ValidationSummaryLogin" runat="server" 
-                           ValidationGroup="LoginGroup" ForeColor="Red" HeaderText="Errores:" />
-                     <asp:Label ID="lbl_nombre_usuario" runat="server" Text="nombre usuario" CssClass="badge" Font-Size="Large" ForeColor="black"></asp:Label>
-                     <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control" placeholder="abc..."></asp:TextBox>
-                      <asp:RequiredFieldValidator ID="valUsuario" runat="server"
-                           ControlToValidate="txtUsuario"
-                           ErrorMessage="El nombre de usuario es obligatorio."
-                          ForeColor="Red" Display="Dynamic" />
+                <!-- LOGIN -->
+               <div id="login" class="form-section active animate_animated animate_fadeIn">
+                   <h2>Iniciar Sesión</h2>
+    
+                   <asp:ValidationSummary ID="ValidationSummaryLogin" runat="server" 
+                        ValidationGroup="LoginGroup" ForeColor="Red" HeaderText="Errores:" />
 
-                     <asp:Label ID="lbl_ClaveLogin" runat="server" Text="contraseña" CssClass="badge" Font-Size="Large" ForeColor="black"></asp:Label>
-                      <asp:TextBox ID="txtClave" runat="server" CssClass="form-control" placeholder="123..."></asp:TextBox>
-                      <asp:RequiredFieldValidator ID="valClave" runat="server"
-                           ControlToValidate="txtClave"
-                           ErrorMessage="La contraseña es obligatoria."
-                           ForeColor="Red" Display="Dynamic" />
-                      </div>
-               <asp:Button ID="btnEntrar" runat="server" Text="Entrar" CssClass="asp-button" 
-                   ValidationGroup="LoginGroup" OnClick="btnEntrar_Click" />
-               <div id="divMensaje" runat="server" visible="false" class="alert alert-danger" role="alert">
-                     
-            </div>
-                  <div class="volver">
-                       <a href="#" onclick="mostrarFormulario('recuperar', event)">¿Olvidaste tu contraseña?</a>
-                      </div>
+                   <asp:Label ID="lbl_nombre_usuario" runat="server" Text="nombre usuario" CssClass="badge" Font-Size="Large" ForeColor="black"></asp:Label>
+                    <asp:TextBox ID="txtUsuario" runat="server" CssClass="form-control" placeholder="abc..."></asp:TextBox>
+                   <asp:RequiredFieldValidator ID="valUsuario" runat="server"
+                        ControlToValidate="txtUsuario"
+                        ErrorMessage="El nombre de usuario es obligatorio."
+                        ForeColor="Red" Display="Dynamic" />
+
+                   <asp:Label ID="lbl_ClaveLogin" runat="server" Text="contraseña" CssClass="badge" Font-Size="Large" ForeColor="black"></asp:Label>
+                    <asp:TextBox ID="txtClave" runat="server" CssClass="form-control" placeholder="123..."></asp:TextBox>
+                   <asp:RequiredFieldValidator ID="valClave" runat="server"
+                        ControlToValidate="txtClave"
+                        ErrorMessage="La contraseña es obligatoria."
+                        ForeColor="Red" Display="Dynamic" />
+
+                  <asp:Button ID="btnEntrar" runat="server" Text="Entrar" CssClass="asp-button" 
+                       ValidationGroup="LoginGroup" OnClick="btnEntrar_Click" />
+
+                   <div class="volver">
+                      <a href="#" onclick="mostrarFormulario('recuperar', event)">¿Olvidaste tu contraseña?</a>
+               </div>
+
+           <div id="divMensaje" runat="server" visible="false" class="alert alert-danger" role="alert"></div>
+               </div>
+
                 <!-- RECUPERAR -->
                <div id="recuperar" class="form-section">
                    <h2>Recuperar Contraseña</h2>

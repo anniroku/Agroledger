@@ -188,8 +188,12 @@
     <Content Include="Dashboard.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DetallesVenta.aspx" />
+    <Content Include="Error404.aspx" />
+    <Content Include="Error500.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="image\error404.jpg" />
+    <Content Include="image\error500.jpg" />
     <Content Include="image\gallinitas.jpg" />
     <Content Include="image\logo_empresa.jpg" />
     <Content Include="Index.aspx" />
@@ -304,6 +308,20 @@
     </Compile>
     <Compile Include="DetallesVenta.aspx.designer.cs">
       <DependentUpon>DetallesVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error404.aspx.cs">
+      <DependentUpon>Error404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error404.aspx.designer.cs">
+      <DependentUpon>Error404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error500.aspx.cs">
+      <DependentUpon>Error500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error500.aspx.designer.cs">
+      <DependentUpon>Error500.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -26,18 +26,51 @@
     }
 
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
+           margin: 0;
+         padding: 0;
+         background-color: #f4f4f4;
+         font-family: Arial, sans-serif;
+         background-image: url('image/gallinitas.jpg');
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         color: white;
         }
 
         .header {
-            background-color: #2e6e2e;
-            padding: 20px;
-            text-align: center;
-            color: white;
+         position: relative;
+         background-color: #2e6e2e;
+         padding: 20px;
+         color: white;
+         text-align: center;
         }
+
+        .header-center {
+         display: inline-flex;
+         align-items: center;
+         gap: 15px;
+        }
+
+        .btn-logout {
+         position: absolute;
+         top: 20px;
+         right: 20px;
+         border: 2px solid #ffffff;
+         background-color: transparent;
+         color: white;
+         padding: 8px 16px;
+         border-radius: 8px;
+         font-weight: bold;
+         cursor: pointer;
+         transition: all 0.3s ease-in-out;
+        }
+
+        .btn-logout:hover {
+         background-color: #ffffff;
+         color: #2e6e2e;
+        }
+
+
 
         .header img {
             width: 100px;
@@ -45,7 +78,7 @@
         }
 
         .title {
-            font-size: 24px;
+            font-size: 30px;
             margin-top: 10px;
         }
 
@@ -86,9 +119,14 @@
 <body>
     <form id="form1" runat="server">
         <div class="header">
-            <img src="image/logo_empresa.jpg" alt="Logo" />
-            <div class="title">Dashboard - Módulos del Sistema</div>
-        </div>
+    <div class="header-center">
+        <img src="image/logo_empresa.jpg" alt="Logo" />
+        <div class="title">Bienvenido - Agroledger</div>
+    </div>
+    <asp:Button ID="btnCerrarSesion" runat="server" Text="Cerrar sesión" CssClass="btn-logout" OnClick="btnCerrarSesion_Click" />
+</div>
+
+
 
         <div class="dashboard-container">
             <div class="card">
