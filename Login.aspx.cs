@@ -8,85 +8,52 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Agroledger.repositories.models;
+
 
 namespace Agroledger
-
-
 {
+
     public partial class Login : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void btnIngresar_Click(object sender, EventArgs e)
         {
+            string usuario = txtUsuario.Text.Trim();
+            string clave = txtClave.Text;
 
-        }
+            var repo = new LoginRepository();
+            var dueno = repo.ValidarCredenciales(usuario, clave);
 
-        ILoginRepository loginRepo = new LoginRepository();
-        protected void btnEntrar_Click(object sender, EventArgs e)
-        {
-            if (Page.IsValid)
+            if (dueno != null)
             {
-                string usuario = txtUsuario.Text.Trim();
-                string clave = txtClave.Text;
+                // Creamos session
+                Session["dueno"] = dueno;
 
-                try
-                 
-                {
-                    if (!loginRepo.HayUsuariosRegistrados())
-                    {
-                        MostrarMensaje("No hay usuarios registrados. Contacta al administrador.", "warning");
-                        return;
-                    }
-
-
-                    int rolId = loginRepo.ObtenerRolUsuario(usuario, clave);
-                    if (rolId != -1)
-                    {
-                        Session["usuario"] = usuario;
-                        Session["rol"] = rolId;
-                        MostrarMensaje("Inicio de sesión exitoso.", "success");
-                        Response.Redirect("Dashboard.aspx");
-                    }
-                    else
-                    {
-                        MostrarMensaje("Usuario o contraseña incorrectos.", "danger");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MostrarMensaje("Error al conectar: " + ex.Message, "danger");
-                }
-               
+                Response.Redirect("Dashboard.aspx");
+            }
+            else
+            {
+                // Error de autenticación
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Usuario o contraseña incorrectos');", true);
             }
         }
-        
+
         protected void btnRecuperar_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
             {
                 string correoRecuperar = txtCorreoRecuperar.Text.Trim();
-               
+
+                var loginRepo = new LoginRepository();
+
+                if (loginRepo.ExisteCorreo(correoRecuperar))
                 {
-                    try
-                    {
-                        bool existe = loginRepo.VerificarCorreoExiste(correoRecuperar);
-                        {
-                           
-                            if (existe)
-                            {
-
-                                MostrarMensaje("Se ha enviado un enlace de recuperación al correo ingresado.", "info");
-
-                            }
-                            else
-                            {
-                                MostrarMensaje("El correo ingresado no está registrado.", "warning");
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MostrarMensaje("Error al recuperar: " + ex.Message, "danger");
-                    }
+                    MostrarMensaje("Se ha enviado un enlace de recuperación al correo ingresado.", "info");
+                    // Aquí puedes agregar lógica futura para enviar email real si lo deseas
+                }
+                else
+                {
+                    MostrarMensaje("El correo ingresado no está registrado.", "warning");
                 }
             }
         }

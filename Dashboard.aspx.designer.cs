@@ -51,6 +51,15 @@ namespace Agroledger
         protected global::System.Web.UI.WebControls.Button btnClientes;
 
         /// <summary>
+        /// Control Registro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Registro;
+
+        /// <summary>
         /// Control gvFacturas.
         /// </summary>
         /// <remarks>

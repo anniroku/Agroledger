@@ -1,7 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="Agroledger.Dashboard" %>
 
-
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -86,6 +84,8 @@
 <body>
     <form id="form1" runat="server">
         <div class="header">
+            <br />
+          
             <img src="image/logo_empresa.jpg" alt="Logo" />
             <div class="title">Dashboard - Módulos del Sistema</div>
         </div>
@@ -95,9 +95,11 @@
                 <asp:Button ID="btnVentas" runat="server" Text="Ventas" OnClick="btnVentas_Click"  CssClass="btn-outline-custom" />
                 <asp:Button ID="btnRegistroFacturas" runat="server" Text="RegistroFacturas" OnClick="btnRegistroFacturas_Click" CssClass="btn-outline-custom" />
                 <asp:Button ID="btnClientes" runat="server" Text="Clientes" OnClick="btnClientes_Click" CssClass="btn-outline-custom" />
-                    
+                     <asp:Button ID="Registro" runat="server" Text="Registro" OnClick="btnRegistro_Click" CssClass="btn-outline-custom" />
             </div>
-            <asp:GridView ID="gvFacturas" runat="server" AutoGenerateColumns="False" BorderColor="#003300" BorderStyle="Double" OnSelectedIndexChanged="grid_facturas_SelectedIndexChanged" DataKeyNames="id,id_factura">
+            <asp:GridView ID="gvFacturas" runat="server" AutoGenerateColumns="False" 
+                BorderColor="#003300" BorderStyle="Double"  DataKeyNames="id,id_factura">
+
                 <Columns>
                     <asp:TemplateField ShowHeader="False">
                         <ItemTemplate>
@@ -110,11 +112,15 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="id_factura" HeaderText="Factura #" />
+                    <asp:BoundField DataField="fecha_factura" HeaderText="Fecha" DataFormatString="{0:yyyy-MM-dd}"  />
                     <asp:BoundField DataField="nombre_cliente" HeaderText="Cliente" />
-                    <asp:BoundField DataField="fecha" HeaderText="Fecha" DataFormatString="{0:yyyy-MM-dd}"  />
-                    <asp:BoundField DataField="total" HeaderText="Total"  DataFormatString="{0:C}" />
-                    <asp:BoundField DataField="forma_pago" HeaderText="Forma de Pago" />
-                    <asp:BoundField DataField="Observaciones" HeaderText="Observaciones" />
+                    <asp:BoundField DataField="apellido_cliente" HeaderText="Apellido" />
+                    <asp:BoundField DataField="email" HeaderText="Correo" />
+                    <asp:BoundField DataField="producto" HeaderText="Producto" />
+                    <asp:BoundField DataField="cantidad" HeaderText="Cantidad" />
+                    <asp:BoundField DataField="precio_unitario" HeaderText="Precio Unitario" />
+                    <asp:BoundField DataField="subtotal" HeaderText="Subtotal" DataFormatString="{0:C}" />
+                    <asp:BoundField DataField="total_factura" HeaderText="Total"  DataFormatString="{0:C}" />
                 </Columns>
                 <PagerTemplate>
                     tabla vacia

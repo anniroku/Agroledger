@@ -4,14 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Agroledger.repositories.models;
+using Agroledger.repositories;
+using Agroledger.repositories.interfaces;
+
+
 namespace Agroledger
 
 {
     public partial class Clientes : Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-        }
+        private readonly IClienteRepository clienteRepo = new ClienteRepository();
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {

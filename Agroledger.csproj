@@ -253,7 +253,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="Usuario.aspx" />
+    <Content Include="RegistrarUsuario.aspx" />
     <Content Include="Ventas.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -344,8 +344,18 @@
     <Compile Include="RegistroFacturas.aspx.designer.cs">
       <DependentUpon>RegistroFacturas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="repositories\ClienteRepository.cs" />
+    <Compile Include="repositories\FacturaRepository.cs" />
+    <Compile Include="repositories\interfaces\IClienteRepository.cs" />
+    <Compile Include="repositories\interfaces\IFacturaRepository.cs.cs" />
     <Compile Include="repositories\interfaces\ILoginRepository.cs" />
-    <Compile Include="repositories\interfaces\LoginRepository.cs" />
+    <Compile Include="repositories\LoginRepository.cs" />
+    <Compile Include="repositories\models\cliente.cs" />
+    <Compile Include="repositories\models\factura.cs" />
+    <Compile Include="repositories\models\Usuario.cs" />
+    <Compile Include="repositories\models\venta.cs" />
+    <Compile Include="repositories\RepositoriesGeneric\GenericRepository.cs" />
+    <Compile Include="repositories\RepositoriesGeneric\interfaces\IRepository.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -360,12 +370,12 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="Usuario.aspx.cs">
-      <DependentUpon>Usuario.aspx</DependentUpon>
+    <Compile Include="RegistrarUsuario.aspx.cs">
+      <DependentUpon>RegistrarUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Usuario.aspx.designer.cs">
-      <DependentUpon>Usuario.aspx</DependentUpon>
+    <Compile Include="RegistrarUsuario.aspx.designer.cs">
+      <DependentUpon>RegistrarUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Ventas.aspx.cs">
       <DependentUpon>Ventas.aspx</DependentUpon>
@@ -384,8 +394,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="repositories\models\" />
-    <Folder Include="repositories\RepositoriesGeneric\" />
     <Folder Include="session\" />
   </ItemGroup>
   <ItemGroup>

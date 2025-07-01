@@ -1,3 +1,5 @@
+C:\Users\Isareti\Documents\angela\Agroledger\Agroledger\obj\Debug\Agroledger.csproj.AssemblyReference.cache
+C:\Users\Isareti\Documents\angela\Agroledger\Agroledger\obj\Debug\Agroledger.csproj.CoreCompileInputs.cache
 C:\Users\Isareti\Documents\angela\Agroledger\Agroledger\bin\Agroledger.dll.config
 C:\Users\Isareti\Documents\angela\Agroledger\Agroledger\bin\Agroledger.dll
 C:\Users\Isareti\Documents\angela\Agroledger\Agroledger\bin\Agroledger.pdb
@@ -109,8 +111,6 @@ C:\Users\Isareti\Documents\angela\Agroledger\Agroledger\bin\Microsoft.AspNet.Fri
 C:\Users\Isareti\Documents\angela\Agroledger\Agroledger\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Isareti\Documents\angela\Agroledger\Agroledger\bin\es\System.Web.Optimization.resources.dll
 C:\Users\Isareti\Documents\angela\Agroledger\Agroledger\bin\es\Microsoft.AspNet.FriendlyUrls.resources.dll
-C:\Users\Isareti\Documents\angela\Agroledger\Agroledger\obj\Debug\Agroledger.csproj.AssemblyReference.cache
-C:\Users\Isareti\Documents\angela\Agroledger\Agroledger\obj\Debug\Agroledger.csproj.CoreCompileInputs.cache
 C:\Users\Isareti\Documents\angela\Agroledger\Agroledger\obj\Debug\Agroledger.csproj.Up2Date
 C:\Users\Isareti\Documents\angela\Agroledger\Agroledger\obj\Debug\Agroledger.dll
 C:\Users\Isareti\Documents\angela\Agroledger\Agroledger\obj\Debug\Agroledger.pdb
