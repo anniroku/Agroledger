@@ -16,18 +16,22 @@ namespace Agroledger.repositories.models
         public int id_cliente { get; set; }
 
         [StringLength(100)]
-        public string nombre { get; set; }
+        public string Nombre { get; set; }
 
 
         [StringLength(100)]
-        public string apellido { get; set; }
+        public string Apellido { get; set; }
+
+        [StringLength(100)]
+        public string Telefono { get; set; }
 
 
         [StringLength(20)]
-        public string numero { get; set; }
+        public string Direccion { get; set; }
 
         [StringLength(255)]
-        public string email { get; set; }
+        public string Email { get; set; }
+
 
 
     }

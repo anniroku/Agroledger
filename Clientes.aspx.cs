@@ -26,21 +26,34 @@ namespace Agroledger
                 return;
             }
 
-            // Obtener los datos
-            string nombre = txtNombre.Text.Trim();
-            string apellido = txtApellido.Text.Trim();
-            string telefono = txtTelefono.Text.Trim();
-            string direccion = txtDireccion.Text.Trim();
-            string email = txtEmail.Text.Trim();
+            cliente nuevoCliente = new cliente
+            {
+                Nombre = txtNombre.Text.Trim(),
+                Apellido = txtApellido.Text.Trim(),
+                Telefono = txtTelefono.Text.Trim(),
+                Direccion = txtDireccion.Text.Trim(),
+                Email = txtEmail.Text.Trim()
+            };
 
-            // Mostrar mensaje de éxito
+            bool resultado = clienteRepo.InsertarCliente(nuevoCliente);
+
             lblMensaje.Visible = true;
-            lblMensaje.Text = "Cliente registrado exitosamente.";
-            lblMensaje.ForeColor = System.Drawing.Color.Green;
 
-            // Limpiar campos
-            LimpiarFormulario();
-        }
+            if (resultado)
+            {
+                lblMensaje.Text = "Cliente registrado exitosamente.";
+                lblMensaje.ForeColor = System.Drawing.Color.Green;
+                LimpiarFormulario();
+                // CargarClientes();
+            }
+            else
+            {
+                lblMensaje.Text = "Ocurrió un error al registrar el cliente.";
+                lblMensaje.ForeColor = System.Drawing.Color.Red;
+            }
+        } // <--- AQUÍ termina tu método
+
+        // <--- AQUÍ PEGAS ESTO:
 
         private void LimpiarFormulario()
         {
@@ -50,5 +63,8 @@ namespace Agroledger
             txtDireccion.Text = "";
             txtEmail.Text = "";
         }
+
+        // <--- DESPUÉS viene la llave de cierre de la clase
     }
 }
+

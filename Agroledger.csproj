@@ -352,6 +352,7 @@
     <Compile Include="repositories\LoginRepository.cs" />
     <Compile Include="repositories\models\cliente.cs" />
     <Compile Include="repositories\models\factura.cs" />
+    <Compile Include="repositories\models\Productos.cs" />
     <Compile Include="repositories\models\Usuario.cs" />
     <Compile Include="repositories\models\venta.cs" />
     <Compile Include="repositories\RepositoriesGeneric\GenericRepository.cs" />

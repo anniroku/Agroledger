@@ -124,6 +124,22 @@
       <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail"
           ErrorMessage="Correo no válido." CssClass="error"
           ValidationExpression="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" Display="Dynamic" />
+        <asp:Button ID="Button1" runat="server" Text="Guardar" OnClick="btnGuardar_Click" />
+        <asp:Button ID="btnActualizar" runat="server" Text="Actualizar" OnClick="btnActualizar_Click" />
+        <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" OnClick="btnEliminar_Click" />
+        <asp:GridView ID="gvClientes" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="gvClientes_SelectedIndexChanged">
+    <Columns>
+        <asp:BoundField DataField="Id" HeaderText="ID" />
+        <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+        <asp:BoundField DataField="Apellido" HeaderText="Apellido" />
+        <asp:BoundField DataField="Telefono" HeaderText="Teléfono" />
+        <asp:BoundField DataField="Direccion" HeaderText="Dirección" />
+        <asp:BoundField DataField="Correo Electronico" HeaderText="Correo Electronico" />
+        <asp:CommandField ShowSelectButton="True" SelectText="Editar" />
+    </Columns>
+</asp:GridView>
+
+
 
       <asp:Button ID="btnGuardar" runat="server" Text="Guardar Datos" CssClass="asp-button" OnClick="btnGuardar_Click" />
     </div>
